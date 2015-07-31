@@ -2,8 +2,8 @@
 public class Problem34 {
 
 	public static void main(String[] args) {
+		double time1 = System.currentTimeMillis();
 		int sum = 0;
-		
 		for (int i = 10; i < factorial(10); i++) {
 			String[] temp = Integer.toString(i).split("");
 			int tempsum = 0;
@@ -16,6 +16,8 @@ public class Problem34 {
 		}
 		
 		System.out.println(sum);
+		double time2 = System.currentTimeMillis();
+		System.out.println("It took "+(time2-time1)/1000+" seconds.");
 
 	}
 	
