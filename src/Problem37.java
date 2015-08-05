@@ -6,7 +6,7 @@ public class Problem37 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(truncatable(10));
+		System.out.println(truncatable(17));
 	}
 	
 	public static boolean truncatable(int number) {
