@@ -1,39 +1,26 @@
 
 
+
 public class Problem33 {
 
 	public static void main(String[] args) {
-//		non-trivial fractions
-		System.out.println(NonTrivial(49,98));
-		int producti = 1;
-		int productj = 1;
-		int count = 0;
-		
-		for (int i = 10; i < 100; i++) {
-			for (int j = 10; j < 99; j++) {
-				if(NonTrivial(i,j)) {
-					System.out.println(i+" and "+j);
-				}
+		for (double i = 11; i < 100; i++) {
+			for (double j = 11; j < 100; j++) {
+				if(String.valueOf(j).contains(""+String.valueOf(i).charAt(0)) | String.valueOf(j).contains(""+String.valueOf(i).charAt(1)))
+				CuriousFraction(i, j);
 			}
 		}
-		
-		System.out.println(count);
 	}
 	
-	public static boolean NonTrivial(int numer, int denom) {
-		if((Double.parseDouble(Integer.toString(numer))/Double.parseDouble(Integer.toString(denom)))<1) {
-			if(Double.parseDouble(Integer.toString(numer).substring(0, 1))/Double.parseDouble(Integer.toString(denom).substring(0, 1))==(Double.parseDouble(Integer.toString(numer))/Double.parseDouble(Integer.toString(denom)))|Double.parseDouble(Integer.toString(numer).substring(0, 1))/Double.parseDouble(Integer.toString(denom).substring(1, 2))==(Double.parseDouble(Integer.toString(numer))/Double.parseDouble(Integer.toString(denom)))|Double.parseDouble(Integer.toString(numer).substring(1, 2))/Double.parseDouble(Integer.toString(denom).substring(0, 1))==(Double.parseDouble(Integer.toString(numer))/Double.parseDouble(Integer.toString(denom)))|Double.parseDouble(Integer.toString(numer).substring(1, 2))/Double.parseDouble(Integer.toString(denom).substring(1, 2))==(Double.parseDouble(Integer.toString(numer))/Double.parseDouble(Integer.toString(denom)))) {
-				if(!(Integer.toString(numer).contains("0"))&!Integer.toString(denom).contains("0")) {
-					if(String.valueOf(numer).contains(String.valueOf(denom).split("")[0])|String.valueOf(numer).contains(String.valueOf(denom).split("")[1])) {
-						if(numer%11!=0 & denom%11!=0) {
-							return true;
+	public static void CuriousFraction (double test1, double test2) {
+		for (int i = 0; i < 2; i++) {
+			for (int j = 0; j < 2; j++) {
+				if(test1/test2<1 & !String.valueOf((int)test1).contains("0") & !String.valueOf((int)test2).contains("0")) {
+					if((double)Character.getNumericValue(String.valueOf(test1).charAt(i))/(double)Character.getNumericValue(String.valueOf(test2).charAt(j))==test1/test2) {
+						System.out.println((int)test1+":"+(int)test2);;
 						}
 					}
 				}
 			}
 		}
-		
-		return false;
 	}
-
-}
