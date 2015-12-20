@@ -23,10 +23,9 @@ public class Problem3 {
 	}
 	
 	public static boolean isPrime(long num) {
-		// TODO Auto-generated method stub
-		if(num == 0 || num == 1) return false;
-		if(num > 2 & Math.abs(num)%2==0) return false;
-		for (long i = 3; i*i < num; i=i+2) {
+		if (num > 2 & Math.abs(num)%2 == 0) return false;
+		if (num == 1) return false;
+		for (long i = 3; i*i <= Math.abs(num); i=i+2) {
 			if(Math.abs(num)%i==0) {
 				return false;
 			}
