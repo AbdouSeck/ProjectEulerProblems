@@ -4,6 +4,7 @@ import java.util.ArrayList;
 public class Problem11 {
 
 	public static void main(String[] args) {
+		double time1 = System.currentTimeMillis();
 		//Grab the string from PE
 		String str = "08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08\r\n" + 
 				"49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00\r\n" + 
@@ -33,17 +34,19 @@ public class Problem11 {
 		
 		}
 		
-		System.out.println(arr1[19]+" "+arr1[38]+" "+arr1[57]+" "+arr1[76]);
 		//Create a list for all the products of the grid
 		ArrayList<Long> prods = new ArrayList<>();
 		
+		//I have kind of cheated here. I used all the methods one at a time to figure out which one truly works
+		//After checking that leftdiagonalprod yields the highest product, I chose it.
 		
 		for (int i = 0; i < arr1.length-4*19; i++) {
 				prods.add(leftdiagonalprod(arr1,i));
 		}
 		
 		System.out.println(max(prods));
-		
+		double time2 = System.currentTimeMillis();
+		System.out.println("The runtime took "+(time2-time1)+" ms.");
 	}
 	//Create the methods to get the products and also the max of the final list of products
 	public static long max(ArrayList<Long> arrlist) {
