@@ -6,9 +6,6 @@ import java.io.IOException;
 public class Problem26 {
 
 	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
-		
-		
 		
 		String [] allnums = new String[999];
 
