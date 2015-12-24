@@ -25,13 +25,7 @@ public class Problem3 {
 	public static boolean isPrime(long num) {
 		if (num > 2 & Math.abs(num)%2 == 0) return false;
 		if (num == 1) return false;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 		
->>>>>>> 0f0a3b5f3228047fb7d686dce956fff4f2ab5e8c
->>>>>>> 4e59064f8751b0e7ce02608fbbd0cad7cf98cfd6
 		for (long i = 3; i*i <= Math.abs(num); i=i+2) {
 			if(Math.abs(num)%i==0) {
 				return false;

@@ -12,7 +12,7 @@ public class Problem23 {
 		
 		for (int j = 1; j <= 28123; j++) {
 			
-			if(Problem21.SumofDivisors(j)>j) {
+			if(Problem21.sumofdivisors(j)>j) {
 				abundants.add(j);
 			}
 		}

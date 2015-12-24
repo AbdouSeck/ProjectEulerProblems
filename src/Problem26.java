@@ -1,27 +1,29 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 
 
 public class Problem26 {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
+		//The algo works this way: initially the remainder of 1 over the integer is 1
+		//Multiply it by 10 and then find the remainder of 10 over the integer
+		//Multiply this new integer by 10 again and proceed to conduct a recursion until you get a remainder of 1 again
 		
-		String [] allnums = new String[999];
-
-		try (BufferedReader buffer = new BufferedReader(new FileReader("C:\\Users\\abdou.seck\\Documents\\Programming\\problem26.txt")))
-		{
-
-		String CurrentString;
-		int counter = 0;
-		while ((CurrentString = buffer.readLine()) != null) {
-		allnums[counter++] = CurrentString;
-		}
-	  }
-		for (String string : allnums) {
-			System.out.println(string.substring(1,string.length()));
-		}
+		System.out.println(lengthofpattern(2));
+		
     }
-	
+	public static long lengthofpattern(long num) {
+		long counter = 1;
+		long n = 10;
+		
+		if(n%num==1) {
+			return 1;
+		} else {
+			while(n%num>1) {
+				n = n*10;
+				n = n%num;
+				counter++;
+			}
+			return counter;
+		}
+	}
 }
 
