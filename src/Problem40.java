@@ -8,14 +8,14 @@ public class Problem40 {
 		for (int i = 0; i <= 1000000; i++) {
 			sb.append(Integer.toString(i));
 		}
-		
+	
 		for (int i = 10; i <= 1000000; i=i*10) {
 			prod = prod * Integer.parseInt(String.valueOf(sb.toString().charAt(i)));
 		}
 		
 		System.out.println(prod);
 		double endtime = System.currentTimeMillis();
-		System.out.println("Running time is "+(endtime-starttime)/1000+" ms!");
+		System.out.println("Running time is "+(endtime-starttime)+" ms!");
 	}
 
 }
