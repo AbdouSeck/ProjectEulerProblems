@@ -1,3 +1,5 @@
+//https://projecteuler.net/problem=16
+
 import java.math.BigInteger;
 
 public class Problem16 {
@@ -10,7 +12,6 @@ public class Problem16 {
 		long time1 = System.currentTimeMillis();
 
 		BigInteger num1 = BigInteger.valueOf(2).pow(1000);
-
 		String str = num1.toString();
 		String[] arrayint = str.split("");
 
@@ -21,9 +22,7 @@ public class Problem16 {
 		}
 
 		System.out.println(sum);
-
 		long time2 = System.currentTimeMillis();
-
 		System.out.println("This program took " + (time2 - time1) + " ms to run!");
 
 	}

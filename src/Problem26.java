@@ -1,8 +1,11 @@
+//https://projecteuler.net/problem=26
+
 import java.util.ArrayList;
 
 public class Problem26 {
 
 	public static void main(String[] args) {
+		
 		// Find the pattern length of every operation 1 % d
 		// Save the pattern length in an array
 		// Find the max of the array

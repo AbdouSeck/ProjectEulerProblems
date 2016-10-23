@@ -1,3 +1,5 @@
+//https://projecteuler.net/problem=20
+
 import java.math.BigInteger;
 
 public class Problem20 {
@@ -7,7 +9,7 @@ public class Problem20 {
 
 		// Finding the sum of the digits of the result of 100!
 
-		long time1 = System.nanoTime();
+		long time1 = System.currentTimeMillis();
 
 		BigInteger num = factorial(BigInteger.valueOf(100));
 
@@ -22,9 +24,9 @@ public class Problem20 {
 
 		System.out.println(sum);
 
-		long time2 = System.nanoTime();
+		long time2 = System.currentTimeMillis();
 
-		System.out.println("The runtime took " + (time2 - time1) + "ns");
+		System.out.println("The runtime took " + (time2 - time1) + " ms.");
 	}
 
 	private static BigInteger factorial(BigInteger x) {

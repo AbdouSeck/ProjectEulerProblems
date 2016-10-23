@@ -1,3 +1,4 @@
+//https://projecteuler.net/problem=42
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -11,7 +12,7 @@ public class Problem42 {
 		int counter = 0;
 		String str = null;
 		String currentLine;
-		BufferedReader bf = new BufferedReader(new FileReader("/Users/aseck-mit/Documents/Personal/workspace/ProjectEulerProblems/data/words.txt"));
+		BufferedReader bf = new BufferedReader(new FileReader("data/words.txt"));
 
 		while ((currentLine = bf.readLine()) != null) {
 			str = currentLine;

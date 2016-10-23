@@ -1,4 +1,4 @@
-
+//https://projecteuler.net/problem=40
 public class Problem40 {
 
 	public static void main(String[] args) {

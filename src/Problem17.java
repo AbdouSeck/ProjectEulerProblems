@@ -1,3 +1,4 @@
+//https://projecteuler.net/problem=17
 
 public class Problem17 {
 
@@ -48,15 +49,10 @@ public class Problem17 {
 		// together
 
 		len1to999 = len1to999 + len1to99;
-
 		System.out.println(len1to999);
-
 		System.out.println("The number of characters is: " + (len1to999 + len1000));
-
 		long time2 = System.currentTimeMillis();
-
 		System.out.println("This program took " + (time2 - time1) + " ms");
-
 	}
 
 }

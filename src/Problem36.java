@@ -1,3 +1,4 @@
+//https://projecteuler.net/problem=36
 
 public class Problem36 {
 

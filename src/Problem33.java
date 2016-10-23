@@ -1,3 +1,4 @@
+//https://projecteuler.net/problem=33
 
 public class Problem33 {
 
@@ -19,7 +20,6 @@ public class Problem33 {
 					if ((double) Character.getNumericValue(String.valueOf(test1).charAt(i))
 							/ (double) Character.getNumericValue(String.valueOf(test2).charAt(j)) == test1 / test2) {
 						System.out.println((int) test1 + ":" + (int) test2);
-						;
 					}
 				}
 			}

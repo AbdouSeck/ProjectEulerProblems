@@ -1,7 +1,8 @@
-
+//https://projecteuler.net/problem=43
 public class Problem43 {
 
 	public static void main(String[] args) {
+		
 		double start = System.currentTimeMillis();
 		System.out.println(Problem41.permutation("1234567890").stream().filter(y -> SpecialPandigital(y))
 				.mapToLong(z -> Long.parseLong(z)).sum());

@@ -1,3 +1,5 @@
+# https://projecteuler.net/problem=33
+
 from fractions import gcd
 
 def prod(arr):
@@ -6,7 +8,7 @@ def prod(arr):
 		prod *= i
 	return prod
 
-#Get the decimal value from the non-trivial fractions
+# Get the decimal value from the non-trivial fractions
 def nontrivialdenom(num1, num2):
 	from fractions import gcd
 	arr1 = list(str(num1))
@@ -23,7 +25,7 @@ def nontrivialdenom(num1, num2):
 	if len(finalarr) == 2:
 		return finalarr[0]/finalarr[1]
 
-#Check to see if the denominator and the numerator share a common digit
+# Check to see if the denominator and the numerator share a common digit
 def sharesomething(num1, num2):
 	arr1 = list(str(num1))
 	arr2 = list(str(num2))
@@ -36,7 +38,7 @@ def sharesomething(num1, num2):
 	else:
 		return False
 
-#Putting everything together
+# Putting everything together
 arr = []
 for i in range(11,100):
 	for j in range(11,i):

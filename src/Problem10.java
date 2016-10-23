@@ -1,3 +1,5 @@
+//https://projecteuler.net/problem=10
+
 import java.util.ArrayList;
 
 public class Problem10 {

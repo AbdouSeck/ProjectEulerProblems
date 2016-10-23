@@ -1,16 +1,12 @@
+//https://projecteuler.net/problem=14
 
 public class Problem14 {
-
-	/**
-	 * @param args
-	 */
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		long time1 = System.nanoTime() / 1000000;
 
 		int number = 1000000;
-
 		long sequenceLength = 0;
 		long startingNumber = 0;
 		long sequence;
@@ -35,11 +31,8 @@ public class Problem14 {
 		}
 
 		System.out.println(startingNumber);
-
 		long time2 = System.nanoTime() / 1000000;
-
 		System.out.println("The program took " + (time2 - time1) + " ms");
-
 	}
 
 }
