@@ -5,7 +5,8 @@ public class Problem36 {
 		// TODO Auto-generated method stub
 		int sum = 0;
 		for (int i = 1; i < 1000000; i++) {
-			if(i == Palindromes.Palindrome(i) & Palindromes.Palindrome(Integer.toBinaryString(i)).equals(Integer.toBinaryString(i))) {
+			if (i == Palindromes.Palindrome(i)
+					& Palindromes.Palindrome(Integer.toBinaryString(i)).equals(Integer.toBinaryString(i))) {
 				sum += i;
 			}
 		}

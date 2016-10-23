@@ -10,22 +10,22 @@ public class Problem34 {
 			for (String string : temp) {
 				tempsum = tempsum + factorial(Integer.parseInt(string));
 			}
-			if(i == tempsum) {
+			if (i == tempsum) {
 				sum = sum + i;
 			}
 		}
-		
+
 		System.out.println(sum);
 		double time2 = System.currentTimeMillis();
-		System.out.println("It took "+(time2-time1)/1000+" seconds.");
+		System.out.println("It took " + (time2 - time1) / 1000 + " seconds.");
 
 	}
-	
+
 	public static int factorial(int num) {
-		if(num == 1 | num == 0) {
+		if (num == 1 | num == 0) {
 			return 1;
 		}
-		return num*factorial(num-1);
+		return num * factorial(num - 1);
 	}
 
 }

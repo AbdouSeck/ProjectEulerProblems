@@ -1,22 +1,29 @@
-import java.util.ArrayList;
-
 
 public class Problem43 {
 
 	public static void main(String[] args) {
-		ArrayList<String> arrlist = Problem41.permutation("1234567890");
-		ArrayList<Integer> pandigitals = new ArrayList<>();
-		
-		for (String string : arrlist) {
-			if(string.length()<10) {
-				pandigitals.add(Integer.valueOf(string));
-			}
-		}
+		double start = System.currentTimeMillis();
+		System.out.println(Problem41.permutation("1234567890").stream().filter(y -> SpecialPandigital(y))
+				.mapToLong(z -> Long.parseLong(z)).sum());
+		double end = System.currentTimeMillis();
+		System.out.println("The runtime took " + (end - start) + " ms.");
 	}
-	public static boolean SpecialPandigital(int num) {
-		String str = String.valueOf(num);
-		for (int i = 0; i < str.length()-3; i++) {
-			
+
+	public static boolean ZeroTo9(String pandigit) {
+		if (pandigit.length() == String.valueOf(Long.parseLong(pandigit)).length()) {
+			return true;
+		}
+		return false;
+	}
+
+	public static boolean SpecialPandigital(String pandigit) {
+		if (Long.parseLong(pandigit.substring(1, 4)) % 2 == 0 && Long.parseLong(pandigit.substring(2, 5)) % 3 == 0
+				&& Long.parseLong(pandigit.substring(3, 6)) % 5 == 0
+				&& Long.parseLong(pandigit.substring(4, 7)) % 7 == 0
+				&& Long.parseLong(pandigit.substring(5, 8)) % 11 == 0
+				&& Long.parseLong(pandigit.substring(6, 9)) % 13 == 0
+				&& Long.parseLong(pandigit.substring(7, 10)) % 17 == 0) {
+			return true;
 		}
 		return false;
 	}
